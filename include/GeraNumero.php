@@ -36,7 +36,7 @@ class GeraNumero
     private function __gerarNumero()
     {
         $numero = rand($this->min, $this->max);
-        if ( count($this->numeros) < $this->max ) {
+        if ( !empty($this->numeros) && count($this->numeros) < $this->max ) {
             while(in_array($numero, $this->numeros)) {
                 $numero = rand($this->min, $this->max);
             }
