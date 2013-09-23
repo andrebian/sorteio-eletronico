@@ -41,7 +41,9 @@ class GeraNumero
                 $numero = rand($this->min, $this->max);
             }
         } else {
-            $numero = '---';
+            if ( count($this->numeros) >= $this->max ) {
+                $numero = '---';
+            }
         }
         
         return $numero;
