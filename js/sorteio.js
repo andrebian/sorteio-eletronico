@@ -7,7 +7,7 @@ $( document ).ready(function() {
         $('#JaSorteados').slideDown('slow');
         
         $.ajax({
-           url: "../include/GeraNumero.php", 
+           url: "./include/GeraNumero.php", 
            data: "s="+sorteados+"&min="+min+"&max="+max,
            method: "post",        
            success: function(retorno) {
